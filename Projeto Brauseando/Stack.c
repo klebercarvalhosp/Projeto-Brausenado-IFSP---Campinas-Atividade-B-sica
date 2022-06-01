@@ -52,8 +52,9 @@ int main (){
       Stack_push(s,"www.olocobixo.gov.br");
     Stack_push(s,"www.iutchubi.com");
     Stack_print(s);
-    Stack_volta(s);
-    Stack_print(s);
+   // Stack_volta(s);
+   // Stack_print(s);
+
 
 
 return 0;

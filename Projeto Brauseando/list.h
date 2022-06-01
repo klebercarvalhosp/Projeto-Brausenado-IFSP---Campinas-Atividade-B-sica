@@ -7,6 +7,7 @@
 
 typedef struct _doubly_node {
     char site [50];
+    char comparador[50];
     struct _doubly_node *prev;
     struct _doubly_node *next;
 } DoublyNode, Node;
@@ -76,16 +77,23 @@ void List_print(const List *L) {
     int compara = L->size-1;
 
     for (int i=0;i < compara ;i++) {
-            //printf("ENTOU AQUI");
+            //printf("ENTROU AQUI");
         printf("%s \n", p->site);
+        if (strcmp(p->site,"www.ehtetra.com.br")==0){
+            printf("-->");
+
+        }
+
         p = p->next;
     }
 
     if (L->end == NULL) {
         printf("-> NULL\n");
     }
+
     else {
-        printf("->%s\n", L->end->site);
+        //puts("");
+        printf(L->end->site);
     }
 
    // printf("Size: %d\n", L->size);
@@ -100,7 +108,7 @@ void volta_Stack(List *L){
 
     //printf("resoltado %d", L->apontador);
 
-    for(int i=1;i < L->apontador;i++){
+    for(int i=1;i < L->apontador-1;i++){
         p = p->next;
 
     }
